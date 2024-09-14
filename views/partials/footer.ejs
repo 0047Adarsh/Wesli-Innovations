@@ -1,0 +1,97 @@
+<footer>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Send an Enquiry</h2>
+            <form id="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required>
+    
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your enquiry here.." required></textarea>
+    
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-name">
+            <h1>Wesli Innovations</h1> 
+            <p>14/2 4th cross, 6th Block Rajajinagar, Bengaluru</p>
+            <p>© Wesli Innovations 2024. All Rights Reserved.</p>
+            <a class="quote" href="#">Contact Us</a>
+        </div>
+        <div class="media">
+            <div class="media-heading">     
+                <h2>Follow us on</h2>
+            </div>
+            <div class="media-icons">
+                <a class="social-media" href="https://www.instagram.com/wesli_innovation_pvt_ltd?utm_source=qr&igsh=cHpiZmlhNTA3M2pn" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a class="social-media" href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a class="social-media" href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a class="social-media" href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+            </div> 
+        </div>
+        <a class="whatsapp" href="https://wa.me/917483648022" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+    </div>
+    <script>
+        var modal = document.getElementById("contactModal");
+        var contactLink = document.querySelector('a[href="/contact"]');
+    
+        var closeBtn = document.querySelector(".close");
+    
+
+        contactLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        });
+    
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+    
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    
+    
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+            };
+            fetch("/send-enquiry", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.status === 200) {
+                alert("Enquiry sent successfully!");
+                document.getElementById("contact-form").reset();
+                modal.style.display = "none";
+            } else {
+                 alert("Failed to send enquiry. Please try again later.");
+             }
+             })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error sending enquiry.");
+            });
+        });
+    </script>
+    
+</footer>
+</body>
+</html>

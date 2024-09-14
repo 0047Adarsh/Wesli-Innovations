@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+<div class="content">
+    <% services.forEach(function(service) { %>
+    <a href="/service/<%= service.title %>">
+        <div class="card">
+            <img src="<%= service.image %>" alt="<%= service.title %> Image" />
+            <h2><%= service.title %></h2>
+            <p><%= service.description %></p>
+        </div>
+    </a>
+    <% }); %>
+</div>
+<%- include("partials/footer.ejs") %>

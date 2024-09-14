@@ -1,0 +1,11 @@
+[
+    {"id": "1", "image": "/images/Industrial_Automation_Service.jpg", "title": "Industrial Automation", "description": "We do Industrial Automation"},
+    {"id": "2", "image": "/images/Home_Automation_Service.jpg", "title": "Home Automation", "description": "We do Home Automation"},
+    {"id": "3", "image": "/images/Renewable_Energy_Service.jpg", "title": "Renewable Energy", "description": "We provide Renewable Energy Solutions"},
+    {"id": "4", "image": "/images/In_Plant_Training_Service.jpg", "title": "In Plant Training", "description": "We offer In Plant Training"},
+    {"id": "5", "image": "/images/PCB_Designing_Service.jpg", "title": "PCB Designing", "description": "We specialize in PCB Designing"},
+    {"id": "6", "image": "/images/PCB_Designing_Service.jpg", "title": "VLSA Architect", "description": "We provide VLSA Architect Solutions"},
+    {"id": "7", "image": "/images/PCB_Designing_Service.jpg", "title": "HVL Coding", "description": "We offer HVL Coding services"},
+    {"id": "8", "image": "/images/PCB_Designing_Service.jpg", "title": "HDL Coding", "description": "We provide HDL Coding services"},
+    {"id": "9", "image": "/images/PCB_Designing_Service.jpg", "title": "Verification Test Bench", "description": "We offer Verification Test Bench services"}
+]

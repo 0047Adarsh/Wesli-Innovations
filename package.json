@@ -10,9 +10,17 @@
   "author": "Adarsh A Devadiga",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.7",
     "boxicons": "^2.1.4",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.4",
     "path": "^0.12.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
     "url": "^0.11.3"
   }
 }

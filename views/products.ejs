@@ -1,0 +1,53 @@
+<%- include("partials/header.ejs") %>
+<div class="title">
+    <h1 style="color:white">Products</h1>
+    <input class="search-bar" placeholder="Search..." type="search">
+</div>
+<!-- <div class="content">
+    <div class="left-pane">
+        <h1 class="product">Bulb</h1>
+        <div class="models hidden">
+            <h2 class="model">Model A</h2>
+            <h2 class="model">Model B</h2>
+        </div>
+
+        <h1 class="product">Smart Bulb</h1>
+        <div class="models hidden">
+            <h2 class="model">Model X</h2>
+            <h2 class="model">Model Y</h2>
+        </div>
+
+        <h1 class="product">Smart Regulators</h1>
+        <div class="models hidden">
+            <h2 class="model">Model P</h2>
+            <h2 class="model">Model Q</h2>
+        </div>
+    </div>
+    <div class="right-pane">
+        <h1>Voltage Ratings</h1>
+        <div class="voltage hidden">220V - 240V</div>
+        <div class="voltage hidden">110V - 120V</div>
+    </div>
+</div> -->
+<div id="root"></div>
+<script src="../src/Main.jsx" type="text/jsx"></script>
+<%- include("partials/footer.ejs") %>
+
+<!-- <script>
+    document.querySelectorAll('.model').forEach(model => {
+        model.addEventListener('mouseover', function() {
+            const voltage = document.querySelector('.right-pane .voltage');
+            if (model.innerText.includes('A')) {
+                voltage.innerText = '220V - 240V';
+            } else if (model.innerText.includes('B')) {
+                voltage.innerText = '110V - 120V';
+            }
+            voltage.classList.remove('hidden');
+        });
+
+        model.addEventListener('mouseout', function() {
+            const voltage = document.querySelector('.right-pane .voltage');
+            voltage.classList.add('hidden');
+        });
+    });
+</script> -->
