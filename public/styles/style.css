@@ -28,13 +28,15 @@ body{
 .company h1 {
     margin: 0;
     margin-left: 10px;
-    font-size: 24px;
-    color: #333;
+    font-size: 36px;
     color: white;
-    font-family: "Libre Bodoni", serif;
+    font-family: "Handjet", sans-serif;
     font-optical-sizing: auto;
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
+    font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
 }
 
 .nav-bar {
@@ -49,19 +51,47 @@ body{
 
 .nav {
     margin: 0 10px;
+    position: relative;
 }
 
 .nav a {
     color: white;
     text-decoration: none;
     padding: 15px 10px;
-    font-weight: bold;
     transition: color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;  
+    position: relative;
 }
 
 .nav a:hover {
-    background-color: gray;
-}   
+    color: #f0f0f0;
+}
+
+.nav a:before, .nav a:after {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 2px;
+    content: '';
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.nav a:before {
+    top: 0;
+    left: 0;
+}
+
+.nav a:after {
+    bottom: 0;
+    right: 0;
+}
+
+.nav a:hover:before, .nav a:hover:after {
+    opacity: 1;
+    width: 100%;
+}
 
 .company img {
     width: 100px;
