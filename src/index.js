@@ -25,6 +25,10 @@
         res.render('index', {webpagename:"Wesli Innovation | Home"});
     });
 
+    app.get('/home', (req, res) => {
+        res.render('main', {webpagename:"Wesli Innovation | Home"});
+    });
+
     // app.get('/products', (req,res)=>{
     //     res.render("products", {webpagename:"Wesli Innovations | Products"});
     // })
